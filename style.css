@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    color: white;
+}
+.main{
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar{
+    background-color: #000;  
+    border-radius: 16px;
+    width: 340px;
+    margin-right: 0.5rem;
+    /* overflow: auto; */
+
+}
+.main_content{
+    background-color: #121212;
+    flex: 1;
+    overflow: auto ;
+    padding:0 1.25rem 0 1.25rem;
+    /* border: 2px solid white; */
+}
+.music_player{
+    /* border: 2px solid white; */
+    background-color: #121212;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 3rem;
+}
+
+/* side bar csss */
+
+/* sidebar nav */
+.sidebar .nav{
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav_option{
+    line-height: 2rem;
+    opacity: 0.7;
+    padding: 0.2rem;
+}
+.nav_option:hover{
+    opacity: 1;
+}
+.nav_option i{
+    font-size: 1.25rem;
+}
+.nav_option a{
+    font-size: 1.25rem;
+    margin-left: 10px;
+}
+
+
+/* sidebar library */
+
+.library{
+    background-color: #000;
+    margin-top: 0.5rem;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    
+}
+.lib-option img{
+    height: 1.25rem;
+    
+} 
+.options{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    align-items: center;
+}
+
+.lib-icons{
+
+    font-size: 1.25rem;
+}
+.lib-icons i {
+    opacity: 0.7;
+    margin: 1rem;
+}
+.lib-icons i:hover{
+    opacity: 1;
+}
+
+
+/* sidebar library boxes */
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0;
+    padding: 0.75rem 1.25rem ;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: #fff;
+    border-radius: 1rem;
+    border: none;
+    font-weight: 700;
+    padding: 0.25rem 1rem;
+    height: 2rem;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* main content */
+/* sticky-nav */
+
+.sticky-nav{
+    position: sticky;
+    display: flex;
+    background-color: #121212;
+    top: 0;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+    align-items: center;
+   z-index: 10;
+}
+
+.sticky-nav-icons{
+    display: flex;
+    align-items: center;
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sticky-nav-options button,i{
+    margin-right: 1rem;
+}
+
+@media (max-width : 1000px){
+    .hide{
+        display: none;
+    }
+}
+
+/* cards css */
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    margin-left:  1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+   
+   
+}
+.card img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    height: 30%;
+    width: 90%;
+    
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music_player{
+    display: flex;
+    height: 4rem;
+}
+.music-allbum{
+    width: 25%;
+    display: flex;
+}
+.music-playbar{
+    width: 50%;
+}
+.music-controls{
+    width: 25%;
+}
+
+.music-playbar .controls img{
+    height: 0.75rem;
+    margin: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.music-playbar .controls img:hover{
+    opacity: 1;
+}
+.controls{
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.progress{
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.progress-bar{
+    width: 70%;
+}
+
+.main_content::-webkit-scrollbar {
+    width: 10px;        /* For vertical scrollbars */
+    height: 10px;       /* For horizontal scrollbars */
+  }
+  
+  .main_content::-webkit-scrollbar-track {
+    background-color: #000000;  /* 🔵 Background color of the scrollbar track */
+  }
+  
+  .main_content::-webkit-scrollbar-thumb {
+    background-color: #888;     /* 🟡 Color of the draggable thumb */
+    border-radius: 5px;
+  }
+  
+  .main_content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;     /* Thumb color on hover */
+  }
+  
+  .music-allbum .allbum-name,.allbum-song,.allbum-icons{
+    margin-right: 0.5rem;
+    
+  }
+
+  .allbum-song img{
+    height: 3rem;
+  }
+ 
+  .allbum-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.75rem;
+  }
+ .p1{
+    height: 1.5rem;
+    font-weight: 700;
+ }
+ .p2{
+    height: 1.5rem;
+    font-size: 0.75rem;
+    opacity: 0.8;
+ }
+ .music-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .music-controls i{
+    opacity: 0.7;
+    cursor: pointer;
+    margin-right: 0.6rem;
+ }
+ .music-controls i:hover{
+    opacity: 1;
+ }
